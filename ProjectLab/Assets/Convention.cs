@@ -35,4 +35,12 @@ public class Convention
     // List 나 Dictionary 를 쓸 때 굳이 dic , list 같은 건 붙이지 않는 걸로
     private List<int> players;
     private Dictionary<int, string> playerNames;
+    
+    // Enum 은 MS 의 공식 문서 권장에 따라 작성
+    public enum AttackType
+    {
+        None,
+        Melee,
+        Ranged
+    }
 }
