@@ -6,8 +6,17 @@ public class Convention
     // 변수 카멜 , 파스켈 로 작성
     // private 는 카멜로 , public 은 파스켈로
     // SerializeField 는 사용하지 않음 , 해야 한다면 public 으로 그냥 작성
+    
+    // 0823 부로 private 변수에는 _ 를 붙이기로 하였습니다.
+    // MSDN 공식에서도 private 에는 _ 를 붙이는걸 권장하고
+    // 특정 상황에서 , 외부에서 Init 을 시킨다거나 할 때 같은 변수명일 경우가 많은 것 같아 _ 를 붙이겠습니다
     public int Count;
-    private int privateCount;
+    private int _privateCount;
+    public void Init(int privateCount)
+    {
+        _privateCount = privateCount;
+    }
+    
     
     // 프로퍼티는 백킹 필드로 작성
     // get , set 동시에 해야할 경우는 public 으로 그냥 작성
